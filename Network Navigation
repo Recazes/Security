@@ -9,9 +9,7 @@
 Golden standard SSh tunnel/ masquerading 
   ssh -MS /tmp/jump student@10.50.28.6
             creates control socket
-  ssh -S /tmp/jump jump -O forward -D9050
-            pushes proxychains onto jump box
-            to cancel run exact command but replace 'forward' with 'cancel'
+
 
 Ping sweep against given network
     for i in {97..126}; do (ping -c 1 192.168.28.$i | grep "bytes from" &); done
