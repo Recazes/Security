@@ -1,5 +1,7 @@
 # Security
     https://sec.cybbh.io/public/security/latest/index.html
+    http://10.50.21.224:8000/
+        ctfd server
 
   ### linux float : 10.50.24.121
 
