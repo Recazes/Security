@@ -1,2 +1,10 @@
+# Penetration Testing
+    ## linux float : 10.50.24.121
+    ## win float : 10.50.27.70
+    ## Stack Number Username Password jump
+    ## 1 NICH-012-M SHXACZ5bb3caaPn 10.50.28.6
+
+
+
 Golden standard SSh tunnel/ masquerading 
-  ssh -MS /tmp/jump student@10.50.
+  ssh -MS /tmp/jump student@10.50.28.6
