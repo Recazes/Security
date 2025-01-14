@@ -1,1 +1,2 @@
-
+Golden standard SSh tunnel/ masquerading 
+  ssh -MS /tmp/jump student@10.50.
