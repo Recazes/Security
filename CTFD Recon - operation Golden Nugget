@@ -216,13 +216,35 @@ Cancel Dynamic and push to 28.120
   ssh -S /tmp/t1 t1 -O forward -D9050
 
 enumeration of networks connected to 28.120
-    proxychains nmap -sV 192.168.28.96/27 -T5
-
-    proxychains nmap -sV 192.168.150.255/27 -T5
-
-
-
-
+    proxychains nmap 192.168.28.96/27 -T4 -p 445
+      all smb closed
+    
+    proxychains nmap 192.168.150.255/27 -T4 -p 445
+      
+        192.168.150.245:445
+          445/tcp open  microsoft-ds
+smb host discovery
+  proxychains nmap --script smb-os-discovery 192.168.150.245 -Pn
+    Nmap scan report for 192.168.150.245
+      Host is up (0.00081s latency).
+      Not shown: 995 closed ports
+      PORT     STATE SERVICE
+      135/tcp  open  msrpc
+      139/tcp  open  netbios-ssn
+      445/tcp  open  microsoft-ds
+      3389/tcp open  ms-wbt-server
+      9999/tcp open  abyss
+      
+      Host script results:
+      | smb-os-discovery: 
+      |   OS: Windows 10 Enterprise 17134 (Windows 10 Enterprise 6.3)
+      |   OS CPE: cpe:/o:microsoft:windows_10::-
+      |   Computer name: kcIiHp7fFnElhU1U4j69
+      |   NetBIOS computer name: KCIIHP7FFNELHU1\x00
+      |   Workgroup: WORKGROUP\x00
+      |_  System time: 2025-01-15T14:20:16+00:00
+      
+      Nmap done: 1 IP address (1 host up) scanned in 3.05 seconds
 
 
 
